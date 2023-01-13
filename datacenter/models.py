@@ -40,7 +40,7 @@ class Visit(models.Model):
         total_minutes = (total_seconds % 3600) // 60
         return f'{round(total_hours)} hours {round(total_minutes)} mins'
           
-    def is_visit_long(self, minutes):
+    def is_visit_long(self, limit_minutes):
         duration = self.get_duration()
-        total_minutes = timedelta.total_seconds(duration)//60
-        return total_minutes > minutes
+        visit_duration_minutes = timedelta.total_seconds(duration)//60
+        return visit_duration_minutes > limit_minutes
