@@ -43,4 +43,4 @@ class Visit(models.Model):
     def is_visit_long(self, minutes):
         duration = self.get_duration()
         total_minutes = timedelta.total_seconds(duration)//60
-        return not total_minutes < minutes
+        return total_minutes > minutes
