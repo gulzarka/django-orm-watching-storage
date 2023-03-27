@@ -33,13 +33,13 @@ class Visit(models.Model):
 
     def get_duration(self):
         return localtime(self.leaved_at)-localtime(self.entered_at)
-            
+
     def format_duration(self, duration):
         total_seconds = timedelta.total_seconds(duration)
         total_hours = total_seconds / 3600
         total_minutes = (total_seconds % 3600) // 60
         return f'{round(total_hours)} hours {round(total_minutes)} mins'
-          
+               
     def is_visit_long(self, limit_minutes):
         duration = self.get_duration()
         visit_duration_minutes = timedelta.total_seconds(duration)//60
