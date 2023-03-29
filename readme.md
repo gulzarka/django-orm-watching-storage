@@ -17,7 +17,7 @@ pip install - r requirements.txt
 ```
 SECRET_KEY=yoursecretkey
 ALLOWED-HOSTS=localhost
-DATABASE_URL in format ENGINE://USER:PASSWORD@HOST:PORT/NAME 
+DATABASE_URL in the following format: ENGINE://USER:PASSWORD@HOST:PORT/NAME 
 ```
 
 
