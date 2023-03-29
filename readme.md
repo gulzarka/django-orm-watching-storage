@@ -13,12 +13,14 @@ source yourenv/bin/activate
 ```
 pip install - r requirements.txt 
 ```
-- Create a .env named file and store there DB name, password and site secret key for ensure your data security:
+- Create db_settings.env named file and store there all secret configurations for ensure your data security:
 ```
-DB_NAME=yourdb
-DB_PASSWORD=yourpaswword
 SECRET_KEY=yoursecretkey
+ALLOWED-HOSTS=localhost
+DATABASE_URL in format ENGINE://USER:PASSWORD@HOST:PORT/NAME 
 ```
 
+
+
 ## How to use
-Use command ```python3 manage.py runserver``` than click on given link, you will be redirected to web browser.
+Use command ```python3 manage.py runserver``` than click on given link in the terminal, you will be redirected to web browser.
